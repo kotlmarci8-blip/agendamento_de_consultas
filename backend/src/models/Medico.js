@@ -33,6 +33,11 @@ const Medico = sequelize.define('Medico', {
         type: DataTypes.STRING,
         allowNull: true,
     },
+    ativo: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: true,
+    },
 });
 
 module.exports = Medico;

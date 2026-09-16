@@ -16,6 +16,10 @@ async function findByEmail(email) {
     return Medico.findOne({ where: { email } });
 }
 
+async function findByCrm(crm) {
+    return Medico.findOne({ where: { crm } });
+}
+
 async function update(id, dados) {
     const medico = await Medico.findByPk(id);
     if (!medico) {
@@ -38,6 +42,7 @@ module.exports = {
     findAll,
     findById,
     findByEmail,
+    findByCrm,
     update,
     remove,
 };
